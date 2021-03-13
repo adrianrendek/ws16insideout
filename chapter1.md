@@ -71,7 +71,7 @@ Username: <user name, ex: domain\admin.account>
 
 
 
-##### Snippets
+#### Snippets
 
 PSh ISE > if-else, do-while 
 
