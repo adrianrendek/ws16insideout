@@ -61,4 +61,40 @@ $computers = get-content c:\Computers.txt
 invoke-command -filepath c:\FixStuff.ps1
 ```
 
+##### Remote Tabs
+PSh ISE > File > New Remote PSh Tab >
+```
+Computer: <computer name, ex: DC1>
+Username: <user name, ex: domain\admin.account>
+```
+..> Connect 
 
+
+
+##### Snippets
+
+PSh ISE > if-else, do-while 
+
+```
+new-snippet
+```
+
+#### PowerShell Direct
+
+- works only on WS16 and W10
+
+```
+get-vm
+
+enter-pssession -vmname <vm name>
+```
+
+#### Remote Desktop
+
+System Properties > Remote tab > enable 
+
+```
+set-itemproperty -path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+```
